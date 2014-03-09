@@ -1,0 +1,11 @@
+include post-meta
+extends layout
+
+block content
+  article.post
+    header.post-header
+      h1= page.title
+      mixin post-meta(page)
+    
+    div.post-content
+      != typogr(page.html).typogrify()

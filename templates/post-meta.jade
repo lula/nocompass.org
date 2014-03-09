@@ -1,0 +1,7 @@
+mixin post-meta(article)
+  menu.post-meta
+    div.post-meta-data
+      i.icon-datetime= moment.utc(article.date).format('DD MMMM YYYY')
+    if article.tags
+      div.post-meta-data
+        i.icon-tags= article.tags

@@ -1,0 +1,9 @@
+- var author = contents.authors[locals.owner.toLowerCase() + '.json']
+if author
+  div.author
+    figure.author-avatar
+      img.avatar-image(src="" alt="")
+    header.author-name= author.metadata.name
+    p.author-bio= author.metadata.bio
+    p
+      small= author.metadata.location

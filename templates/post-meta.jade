@@ -1,7 +1,9 @@
 mixin post-meta(article)
   menu.post-meta
     div.post-meta-data
-      i.icon-datetime= moment.utc(article.date).format('DD MMMM YYYY')
-    if article.tags
-      div.post-meta-data
-        i.icon-tags= article.tags
+      i.icon-calendar
+      = " " + moment.utc(article.date).format('DD MMMM YYYY')
+      br
+      if article.metadata.tags
+        i.icon-tags
+        = " " + article.metadata.tags

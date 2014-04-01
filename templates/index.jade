@@ -5,16 +5,16 @@ block content
   include author
   each article in articles
     article.post
-    header.post-header
-      h1
-        a(href!=article.url title!="Read &quot;article.title&quot;")= article.title
-      mixin post-meta(article)
+      header.post-header
+        h1
+          a(href!=article.url title!="Read &quot;"+article.title+"&quot;")= article.title
+        mixin post-meta(article)
 
-    div.post-content
-      p
+      div.post-content
         | !{ typogr(article.intro).typogrify() }
-        a(href!=article.url, class="button button-default button-keep-reading", title!="Read &quot;article.title&quot;") Keep reading &rarr;
-    
+        if article.hasMore
+          a.more(href=article.url, title!="Read &quot;"+article.title+"&quot;") ...
+        // a.more.pull-right(href!=article.url, title!="Read &quot;"+article.title+"&quot;") Keep reading &rarr;    
 
 block prepend footer
   nav(class="pagination", role="pagination")

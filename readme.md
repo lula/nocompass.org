@@ -1,4 +1,3 @@
+# nocompass.org
 
-# Blog
-
-The default [wintersmith](https://github.com/jnordberg/wintersmith) template
+My personal blog powered by [wintersmith](https://github.com/jnordberg/wintersmith). 

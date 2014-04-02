@@ -3,7 +3,7 @@
     "url": "http://localhost:8080",
     "name": "Double L",
     "owner": "Lula",
-    "description": "Ramblings of an immor(t)al demigod"
+    "description": ""
   },
   "plugins": [
     "./plugins/paginator.coffee"
